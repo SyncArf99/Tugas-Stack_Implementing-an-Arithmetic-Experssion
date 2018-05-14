@@ -1,3 +1,10 @@
+/*NAMA Kelompok :
+1. Fadli Alvindra
+2. Adinda Rizky F
+3. M. Reza Anggara
+4. Prima Feminita
+*/
+
 #include<iostream>
 #include<stack>
 #include <bits/stdc++.h>
