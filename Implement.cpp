@@ -28,7 +28,8 @@ int InfixtoPostfix ()
 	{
 		if(isOperand(Q[i]))
 		{
-			//add it to P
+				postfix+= S.top();
+				S.pop();
 		}
 		else if(Q[i]=='(')
 		{
@@ -38,7 +39,8 @@ int InfixtoPostfix ()
 		{
 			while(!P.empty() && P.top() != '(')
 			{
-				//Pop the stack and add the popped value to P
+				postfix+= S.top();
+				S.pop();
 			}
 			P.pop();
 		}
@@ -60,7 +62,8 @@ int InfixtoPostfix ()
 	} i++;
 	while(!P.empty())
 	{
-		//Pop the stack and add the popped value to P
+		postfix += S.top();
+		S.pop();
 	}
 
 	return 0;
