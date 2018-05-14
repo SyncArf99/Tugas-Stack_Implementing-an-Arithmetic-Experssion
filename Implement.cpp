@@ -102,11 +102,12 @@ bool isOperator(char A)
 
 int evalOperation(char operation, int operandA, int operandB)
 {
-	if(operation == '+') return operandA +operandB;
-	else if(operation == '-') return operandA - operandB;
-	else if(operation == '*') return operandA * operandB;
-	else if(operation == '/') return operandA / operandB;
-
-	else cout<<"Unexpected Error \n";
-	return -1; 
+	 if(c == '^')
+    return 3;
+    else if(c == '*' || c == '/')
+    return 2;
+    else if(c == '+' || c == '-')
+    return 1;
+    else
+    return -1;
 }
