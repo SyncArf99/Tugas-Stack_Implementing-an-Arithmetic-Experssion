@@ -57,7 +57,7 @@ int InfixtoPostfix ()
 			}
 			else
 			{
-				while(!P.empty() && P.top() != '(' && /*prendence...*/)
+				while(!P.empty() && P.top() != '(' && HasHigherPrecedence(S.top(),expression[i]))
 				{
 					postfix+= S.top();
 					S.pop();
