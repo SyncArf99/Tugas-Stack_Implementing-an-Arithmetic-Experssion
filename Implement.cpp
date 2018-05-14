@@ -54,7 +54,8 @@ int InfixtoPostfix ()
 			{
 				while(!P.empty() && P.top() != '(' && /*prendence...*/)
 				{
-					//Pop the stack and add the top value to P
+					postfix+= S.top();
+					S.pop();
 				}
 				P.push(Q[i])
 			}
@@ -108,7 +109,7 @@ bool isOperator(char A)
 
 int evalOperation(char operation, int operandA, int operandB)
 {
-	 if(c == '^')
+    if(c == '^')
     return 3;
     else if(c == '*' || c == '/')
     return 2;
